@@ -38,7 +38,7 @@ under development.
    * (flex) flex 2.6.4
    * (bison) bison 3.8.2
 
-1. Confirm that map/sparta branch is `map_v2.0.21`
+1. Confirm that map/sparta branch is `map_v2.2.3`
 
 1. Build Olympia in one of three modes (see below):
    * `release`: Highly optimized, no debug w/ LTO (if supported)

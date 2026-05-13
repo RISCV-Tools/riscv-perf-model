@@ -72,7 +72,7 @@ void OlympiaSim::buildTree_()
     cpu_factory->buildTree(getRoot());
 
     // Set the workload in the simulation configuration
-    auto extension = sparta::notNull(cpu_tn->getExtension("simulation_configuration"));
+    auto extension = sparta::notNull(cpu_tn->createExtension("simulation_configuration"));
     auto workload  = extension->getParameters()->getParameter("workload");
     workload->setValueFromString(workload_);
 
