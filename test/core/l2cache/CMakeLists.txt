@@ -2,7 +2,7 @@ project(L2Cache_test)
 
 add_executable(L2Cache_test L2Cache_test.cpp)
 
-target_link_libraries(L2Cache_test core common_test mss ${STF_LINK_LIBS} SPARTA::sparta)
+target_link_libraries(L2Cache_test core common_test mss stf SPARTA::sparta)
 
 file(CREATE_LINK ${SIM_BASE}/mavis/json ${CMAKE_CURRENT_BINARY_DIR}/mavis_isa_files SYMBOLIC)
 file(CREATE_LINK ${SIM_BASE}/arches     ${CMAKE_CURRENT_BINARY_DIR}/arches          SYMBOLIC)

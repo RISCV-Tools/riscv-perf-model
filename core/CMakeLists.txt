@@ -9,7 +9,7 @@ add_custom_command(
         -DGIT_VERSION_FILE=${GIT_VERSION_FILE}
         -DSOURCE_DIR=${CMAKE_SOURCE_DIR}
         -P ${CMAKE_CURRENT_SOURCE_DIR}/GenerateGitVersion.cmake
-    DEPENDS 
+    DEPENDS
         ${CMAKE_SOURCE_DIR}/.git/HEAD
         ${CMAKE_SOURCE_DIR}/.git/index
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
@@ -39,7 +39,7 @@ add_library(instgen
 
 find_package(Boost REQUIRED COMPONENTS json)
 
-target_link_libraries(instgen ${STF_LINK_LIBS} mavis Boost::json)
+target_link_libraries(instgen PUBLIC stf  mavis Boost::json)
 
 get_property(SPARTA_INCLUDE_PROP TARGET SPARTA::sparta PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(core SYSTEM PRIVATE ${SPARTA_INCLUDE_PROP})
